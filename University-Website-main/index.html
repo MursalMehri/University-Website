@@ -233,7 +233,142 @@
 
 
 
+<!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container py-5">
+      <div class="row g-4 py-3">
+        <div class="col-12 col-lg-4">
+          <a class="d-inline-flex align-items-center gap-2 mb-3" href="#top">
+            <span class="brand-badge"><i class="bi bi-mortarboard-fill"></i></span>
+            <span class="d-flex flex-column lh-1">
+              <span class="brand-name font-serif">Meridian</span>
+              <span class="brand-sub">UNIVERSITY</span>
+            </span>
+          </a>
+          <p class="footer-about">
+            Founded in 1952, Meridian University is a leading teaching and research institution,
+            accredited by the National Board of Higher Education, dedicated to scholarship,
+            discovery and service to society.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2 offset-lg-1">
+          <h6 class="footer-title">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#browseSection">Our Courses</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6 class="footer-title">For Students</h6>
+          <ul class="footer-links">
+            <li><a href="#browseSection">Course Catalog</a></li>
+            <li><a href="#tuition">Tuition &amp; Fees</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#enrollModal" id="footerEnrollLink">Enrollment</a></li>
+            <li><a href="#">Academic Calendar</a></li>
+            <li><a href="#">Library</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-5 col-lg-3">
+          <h6 class="footer-title">Contact Us</h6>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt-fill"></i><span>1200 Meridian Boulevard, Riverton, RV 45021</span></li>
+            <li><i class="bi bi-telephone-fill"></i><span>+1 (800) 555-0142</span></li>
+            <li><i class="bi bi-envelope-fill"></i><span>admissions@meridian.edu</span></li>
+            <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Fri &middot; 8:30 AM &ndash; 5:30 PM</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>&copy; 2026 Meridian University. All Rights Reserved.</span>
+        <span class="footer-bottom-links">
+          <a href="#">Privacy Policy</a><span>&middot;</span><a href="#">Terms of Use</a><span>&middot;</span><a href="#">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </footer>
 
+  <!-- ============ ENROLLMENT MODAL ============ -->
+  <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header app-modal-header">
+          <h5 class="modal-title font-serif" id="enrollModalTitle">
+            <i class="bi bi-pencil-square me-2"></i>Course Enrollment Application
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div id="enrollFormWrap">
+            <p class="text-muted small mb-4">
+              Complete the application below to reserve your place. Fields marked
+              <span class="required-mark">*</span> are required.
+            </p>
+            <form id="enrollForm" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="enrollName">Full Name <span class="required-mark">*</span></label>
+                  <input type="text" class="form-control" id="enrollName" placeholder="e.g. Amelia J. Ward" required>
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="enrollFather">Father's Name <span class="required-mark">*</span></label>
+                  <input type="text" class="form-control" id="enrollFather" placeholder="e.g. Robert M. Ward" required>
+                  <div class="invalid-feedback">Please enter your father's name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="enrollEmail">Email Address <span class="required-mark">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text icon-addon"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control" id="enrollEmail" placeholder="you@example.com" required>
+                  </div>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="enrollPhone">Phone Number <span class="required-mark">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text icon-addon"><i class="bi bi-telephone"></i></span>
+                    <input type="tel" class="form-control" id="enrollPhone" placeholder="+1 555 000 1234" pattern="[0-9+()\-\s]{7,20}" required>
+                  </div>
+                  <div class="invalid-feedback">Please enter a valid phone number.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="enrollDob">Date of Birth <span class="required-mark">*</span></label>
+                  <input type="date" class="form-control" id="enrollDob" required>
+                  <div class="invalid-feedback">Please select your date of birth.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="enrollGender">Gender <span class="required-mark">*</span></label>
+                  <select class="form-select" id="enrollGender" required>
+                    <option value="" disabled selected>Select gender...</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                    <option>Prefer not to say</option>
+                  </select>
+                  <div class="invalid-feedback">Please select your gender.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="enrollAddress">Address <span class="required-mark">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text icon-addon"><i class="bi bi-house-door"></i></span>
+                    <input type="text" class="form-control" id="enrollAddress" placeholder="Street, city, state / province, postal code" required>
+                  </div>
+                  <div class="invalid-feedback">Please enter your full address.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="enrollEducation">Previous Education <span class="required-mark">*</span></label>
 
 </body>
 </html>
