@@ -23,325 +23,389 @@
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
 >
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/contact.css">
 
 <!-- Your CSS -->
 
 
 </head>
-<style>
-  *{
-
-}
-
-.join-btn:hover { background: white;
-color: #071d49;
-
-transform: translateY(-3px);
-}
-/* ========================= FOOTER ========================= */
-.footer { background: #061e4c;
-color: white;
-
-padding: 70px 0 20px;
-}
-.footer h4 { font-size: 23px; margin-bottom: 20px; }
-.footer h5 { font-size: 16px; margin-bottom: 20px; }
-.footer p { color: #b9c8df;
-font-size: 13px;
-
-line-height: 1.8;
-}
-.footer ul { list-style: none;
-padding: 0;
-}
-.footer ul li { margin-bottom: 12px; }
-.footer ul li a { color: #b9c8df;
-font-size: 13px;
-
-transition: 0.3s;
-}
-.footer ul li a:hover { color: white; padding-left: 4px; }
-.footer-contact-item { display: flex;
-align-items: center;
-
-gap: 10px;
-
-margin-bottom: 13px;
-}
-.footer-contact-item i { color: #2d9bf0; }
-.footer-contact-item a { color: #b9c8df;
-font-size: 13px;
-}
-.footer-contact-item a:hover { color: white; }
-.footer hr { border-color: rgba(255, 255, 255, 0.15);
-margin: 45px 0 20px;
-}
-.footer-bottom { display: flex;
-align-items: center;
-
-justify-content: space-between;
-}
-.footer-bottom p { margin: 0; }
-#backToTop { width: 42px; height: 42px;
-background: #087ce8;
-
-color: white;
-
-display: flex;
-
-align-items: center;
-justify-content: center;
-
-border-radius: 50%;
-
-transition: 0.3s;
-}
-#backToTop:hover { background: white; color: #061e4c; }
-/* ========================= RESPONSIVE ========================= */
-@media (max-width: 991px) {
-.contact-hero {
-    height: 260px;
-}
-
-.hero-content h1 {
-    font-size: 40px;
-}
-
-.contact-section {
-    padding: 65px 0;
-}
-
-.contact-info-card {
-    margin-top: 10px;
-}
-
-.join-section {
-    text-align: center;
-}
-
-.join-section .text-lg-end {
-    text-align: center !important;
-    margin-top: 25px;
-}
-}
-@media (max-width: 576px) {
-.contact-hero {
-    height: 220px;
-}
-
-.hero-content h1 {
-    font-size: 32px;
-}
-
-.contact-section {
-    padding: 50px 15px;
-}
-
-.contact-form-box h2 {
-    font-size: 24px;
-}
-
-.contact-info-card {
-    padding: 30px 22px;
-}
 
-#heratMap {
-    height: 350px;
-}
-
-.join-section {
-    padding: 45px 20px;
-}
-
-.join-section h2 {
-    font-size: 24px;
-}
-
-.footer {
-    padding: 50px 20px 20px;
-}
-
-.footer-bottom {
-    flex-direction: column;
-    gap: 20px;
-}
-}
-
-/* ========================= GENERAL ========================= */
-
-html { scroll-behavior: smooth; }
-body { font-family: Arial, Helvetica, sans-serif; color: #222; background: #ffffff; }
-a { text-decoration: none; }
-.container { max-width: 1100px; }
-/* ========================= CONTACT HERO ========================= */
-.contact-hero { height: 310px; background: linear-gradient( rgba(6, 30, 76, 0.92), rgba(6, 30, 76, 0.92) ), url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1") center / cover no-repeat;
-position: relative;
-
-display: flex;
-align-items: center;
-justify-content: center;
-
-color: white;
-}
-.hero-content { position: relative; z-index: 2;
-text-align: center;
-}
-.hero-content h1 { font-size: 48px; font-weight: 700; margin-bottom: 12px; }
-.hero-content p { font-size: 14px; color: #ffffff; }
-.hero-content p span { margin: 0 8px; color: #f5b82e; }
-/* ========================= CONTACT SECTION ========================= */
-.contact-section { padding: 90px 0; background: #ffffff; }
-.contact-form-box h2 { color: #071d49; font-size: 28px; font-weight: 700; margin-bottom: 12px; }
-.section-description { color: #777; line-height: 1.8; font-size: 14px; max-width: 650px; margin-bottom: 30px; }
-/* ========================= INPUTS ========================= */
-.input-group-custom { height: 58px;
-background: #f5f7fa;
-
-display: flex;
-align-items: center;
-
-padding: 0 18px;
-
-border: 1px solid transparent;
-
-transition: 0.3s;
-}
-.input-group-custom:focus-within { border-color: #087ce8; background: #ffffff; }
-.input-group-custom i { color: #087ce8; margin-right: 12px; }
-.input-group-custom input { width: 100%; height: 100%;
-border: none;
-outline: none;
-
-background: transparent;
-
-font-size: 14px;
-}
-textarea { width: 100%;
-border: none;
-outline: none;
-
-background: #f5f7fa;
-
-padding: 18px;
-
-font-size: 14px;
-
-resize: vertical;
-
-transition: 0.3s;
-}
-textarea:focus { background: white; border: 1px solid #164c7ee0; }
-/* ========================= SEND BUTTON ========================= */
-.send-btn { border: none;
-background: #06437dc0;
-
-color: white;
-
-padding: 15px 28px;
-
-font-size: 14px;
-font-weight: 600;
-
-cursor: pointer;
-
-transition: 0.3s;
-}
-.send-btn i { margin-left: 8px; }
-.send-btn:hover { background: #061e4c; transform: translateY(-2px); }
-/* ========================= FORM MESSAGE ========================= */
-#formMessage { margin-top: 20px;
-font-size: 14px;
-font-weight: 600;
-}
-/* ========================= CONTACT INFO CARD ========================= */
-.contact-info-card { background: #061e4c;
-color: white;
-
-padding: 38px 30px;
-
-min-height: 430px;
-
-box-shadow: 0 15px 40px rgba(6, 30, 76, 0.15);
-}
-.contact-info-card h3 { font-size: 25px; margin-bottom: 30px; }
-.contact-item { display: flex;
-gap: 15px;
-
-margin-bottom: 25px;
-}
-.contact-icon { width: 42px; height: 42px;
-background: white;
-
-color: #074a89;
-
-display: flex;
-align-items: center;
-justify-content: center;
-
-border-radius: 50%;
-
-flex-shrink: 0;
-}
-.contact-item h6 { margin-bottom: 5px;
-font-size: 13px;
-font-weight: 700;
-}
-.contact-item a, .contact-item p { color: #dce6f8;
-font-size: 13px;
-
-margin: 0;
-
-line-height: 1.6;
-}
-.contact-item a:hover { color: white; }
-/* ========================= SOCIAL LINKS ========================= */
-.follow-title { margin-top: 35px; margin-bottom: 15px; }
-.social-links { display: flex; gap: 10px; }
-.social-links a { width: 38px; height: 38px;
-background: #0b4d98;
-
-color: white;
-
-display: flex;
-align-items: center;
-justify-content: center;
-
-border-radius: 50%;
-
-transition: 0.3s;
-}
-.social-links a:hover { background: #0266c4; transform: translateY(-3px); }
-/* =========================
-   HERAT MAP
-========================= */
-
-.map-section {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background: #061e4c;
-}
-
-.map-section iframe {
-    display: block;
-    width: 100%;
-    height: 450px;
-    border: 0;
-}
-/* ========================= JOIN SECTION ========================= */
-.join-section { background: #014484;
-color: white;
-
-padding: 55px 0;
-}
-.join-section h2 { font-size: 30px; font-weight: 700;
-margin-bottom: 10px;
-}
-.join-section p { margin: 0;
-color: #e8f3ff;
-}
-.join-btn { display: inline-flex;
-    }
-</style>
+<body>
 
+
+
+    <!-- ============ TOP BAR ============ -->
+  <div class="topbar d-none d-lg-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <span class="topbar-item"><i class="bi bi-geo-alt-fill"></i> 1200 Meridian Boulevard, Riverton</span>
+        <span class="topbar-item"><i class="bi bi-telephone-fill"></i> +1 (800) 555-0142</span>
+        <span class="topbar-item"><i class="bi bi-envelope-fill"></i> admissions@meridian.edu</span>
+      </div>
+      <div class="topbar-social">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-main sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+        <span class="brand-badge"><i class="bi bi-mortarboard-fill"></i></span>
+        <span class="d-flex flex-column lh-1">
+          <span class="brand-name font-serif">Meridian</span>
+          <span class="brand-sub">UNIVERSITY</span>
+        </span>
+      </a>
+      <button class="navbar-toggler gold-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link " aria-current="page" href="#browseSection">Courses</a></li>
+          <li class="nav-item"><a class="nav-link  active" href="#">Contact</a></li>
+        </ul>
+        <a href="#" class="btn btn-gold rounded-pill px-3 py-2 btn-login">
+          <i class="bi bi-box-arrow-in-right me-1"></i> Login
+        </a>
+      </div>
+    </div>
+  </nav>
+    <!-- =========================
+     CONTACT HERO
+========================== -->
+
+<section class="contact-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <h1>Contact Us</h1>
+
+        <p>
+            Home
+            <span>/</span>
+            Contact Us
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT SECTION
+========================== -->
+
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="row g-5 align-items-start">
+
+            <!-- FORM -->
+            <div class="col-lg-8">
+
+                <div class="contact-form-box">
+
+                    <h2>Free Message Us</h2>
+
+                    <p class="section-description">
+                        Have a question about our courses or learning programs?
+                        Send us a message and our team in Herat will contact you.
+                    </p>
+
+                    <form id="contactForm">
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <div class="input-group-custom">
+
+                                    <i class="bi bi-person"></i>
+
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        placeholder="Your Name"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="input-group-custom">
+
+                                    <i class="bi bi-envelope"></i>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        placeholder="Email Address"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="input-group-custom">
+
+                                    <i class="bi bi-telephone"></i>
+
+                                    <input
+                                        type="text"
+                                        id="phone"
+                                        placeholder="Phone Number"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="input-group-custom">
+
+                                    <i class="bi bi-chat-left-text"></i>
+
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        placeholder="Subject"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <textarea
+                                    id="message"
+                                    rows="6"
+                                    placeholder="Write your message..."
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <button
+                                    type="submit"
+
+                                    class="send-btn"
+                                >
+                                    Send Message
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    <div id="formMessage"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT INFO -->
+            <div class="col-lg-4">
+
+                <div class="contact-info-card">
+
+                    <h3>Contact Info</h3>
+
+                    <div id="contactInfo"></div>
+
+                    <h5 class="follow-title">
+                        Follow Us
+                    </h5>
+
+                    <div
+                        class="social-links"
+                        id="socialLinks"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MAP
+========================== -->
+
+<iframe
+    src="https://www.google.com/maps?q=Herat,Afghanistan&output=embed"
+    width="100%"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+
+<!-- =========================
+     JOIN SECTION
+========================== -->
+
+<section class="join-section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+
+                <h2>
+                    Join Herat's Learning Community
+                </h2>
+
+                <p>
+                    Learn new skills, discover new opportunities
+                    and build your future with us.
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-4 text-lg-end">
+
+                <a
+                    href="#contactForm"
+                    class="join-btn" style="color: rgb(2, 32, 122);"
+                >
+                    Join With Us
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+<!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container py-5">
+      <div class="row g-4 py-3">
+        <div class="col-12 col-lg-4">
+          <a class="d-inline-flex align-items-center gap-2 mb-3" href="#top">
+            <span class="brand-badge"><i class="bi bi-mortarboard-fill"></i></span>
+            <span class="d-flex flex-column lh-1">
+              <span class="brand-name font-serif">Meridian</span>
+              <span class="brand-sub">UNIVERSITY</span>
+            </span>
+          </a>
+          <p class="footer-about">
+            Founded in 1952, Meridian University is a leading teaching and research institution,
+            accredited by the National Board of Higher Education, dedicated to scholarship,
+            discovery and service to society.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2 offset-lg-1">
+          <h6 class="footer-title">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#browseSection">Our Courses</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6 class="footer-title">For Students</h6>
+          <ul class="footer-links">
+            <li><a href="#browseSection">Course Catalog</a></li>
+            <li><a href="#tuition">Tuition &amp; Fees</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#enrollModal" id="footerEnrollLink">Enrollment</a></li>
+            <li><a href="#">Academic Calendar</a></li>
+            <li><a href="#">Library</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-5 col-lg-3">
+          <h6 class="footer-title">Contact Us</h6>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt-fill"></i><span>1200 Meridian Boulevard, Riverton, RV 45021</span></li>
+            <li><i class="bi bi-telephone-fill"></i><span>+1 (800) 555-0142</span></li>
+            <li><i class="bi bi-envelope-fill"></i><span>admissions@meridian.edu</span></li>
+            <li><i class="bi bi-clock-fill"></i><span>Mon &ndash; Fri &middot; 8:30 AM &ndash; 5:30 PM</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>&copy; 2026 Meridian University. All Rights Reserved.</span>
+        <span class="footer-bottom-links">
+          <a href="#">Privacy Policy</a><span>&middot;</span><a href="#">Terms of Use</a><span>&middot;</span><a href="#">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ ENROLLMENT MODAL ============ -->
+  <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header app-modal-header">
+          <h5 class="modal-title font-serif" id="enrollModalTitle">
+            <i class="bi bi-pencil-square me-2"></i>Course Enrollment Application
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+
+<!-- Leaflet JS -->
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+
+    </a>
+</div>
+
+
+</body>
 </html>
