@@ -1,0 +1,309 @@
+ 
+
+:root { 
+    --navy-950: #071530; 
+    --navy-900: #0a1f44; 
+    --navy-800: #0f2b5c; 
+    --navy-700: #15366e; 
+    --navy-600: #1d4385; 
+    --navy-100: #e8edf6; 
+    --navy-50:  #f4f7fc;
+    --gold-600: #a8821c; 
+    --gold-500: #c9a227; 
+    --gold-400: #d4af37; 
+    --gold-300: #e6c96a; 
+    --gold-100: #faf3dc;
+    --ink:      #22304a; 
+    --muted:    #66738e; 
+    --line:     #e3e8f1; 
+    --bg:       #f5f7fb;
+    --shadow-sm: 0 0.35rem 1rem rgba(7, 21, 48, 0.08); 
+    --shadow-lg: 0 1rem 2.5rem rgba(7, 21, 48, 0.15);
+ }
+
+
+/* ================ 2. Base & Typography ==================== */
+
+body { 
+    background-color: var(--navy-950); 
+    color: #ffffff; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    overflow-x: hidden; 
+    margin: 0; 
+    padding: 0; 
+}
+
+a { 
+    text-decoration: none; 
+    transition: all 0.3s ease; 
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+}
+
+.hero-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.75) !important;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem; }
+
+.hero-logo .logo-symbol { 
+    font-size: 3rem; 
+    color: var(--gold-400); 
+    margin-bottom: 0.2rem; 
+}
+
+.hero-logo span { 
+    font-size: 1.2rem; 
+    font-weight: 700; 
+    letter-spacing: 4px; 
+    color: #ffffff; 
+    display: block; 
+}
+
+.hero-logo small { 
+    font-size: 0.75rem; 
+    letter-spacing: 3px; 
+    color: var(--gold-300); 
+    display: block; 
+}
+
+.hero-text .hero-small-title { 
+    font-size: 0.85rem; 
+    letter-spacing: 3px; 
+    color: var(--gold-400); 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    margin-bottom: 0.5rem; 
+    display: block; 
+}
+
+.hero-text h1 { 
+    font-size: 3.8rem; 
+    font-weight: 800; 
+    color: #ffffff; 
+    line-height: 1.15; 
+    margin-bottom: 1.2rem; 
+}
+
+.hero-text h1 span { 
+    color: var(--gold-400); 
+    font-family: Georgia, serif; 
+    font-style: italic; 
+    font-weight: 400; 
+}
+
+.hero-text p { 
+    font-size: 1.05rem; 
+    color: var(--navy-100); 
+    max-width: 600px; 
+    margin: 0 auto 2rem auto; 
+    line-height: 1.6; 
+}
+
+.main-btn { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 0.6rem; 
+    background: transparent; 
+    color: #ffffff; 
+    border: 1.5px solid rgba(255, 255, 255, 0.4); 
+    padding: 0.75rem 2rem; 
+    border-radius: 50px; 
+    font-weight: 500; 
+    backdrop-filter: blur(8px); 
+}
+
+.main-btn:hover { 
+    background-color: var(--gold-500); 
+    border-color: var(--gold-500); 
+    color: var(--navy-950); 
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 20px rgba(201, 162, 39, 0.3); 
+}
+
+
+
+/* ==================== 4. Floating Info Cards (کارت‌های سه تایی روی هیرو) ======================== */ 
+
+.info-card { 
+    background: rgba(10, 31, 68, 0.75); 
+    border: 1px solid rgba(227, 232, 241, 0.12); 
+    backdrop-filter: blur(16px); 
+    border-radius: 16px; 
+    padding: 1.8rem; 
+    display: flex; 
+    align-items: flex-start; 
+    gap: 1.2rem; 
+    transition: all 0.35s ease; 
+    box-shadow: var(--shadow-sm); 
+    height: 100%; 
+}
+
+.info-card:hover {
+     transform: translateY(-6px); 
+     background: rgba(15, 43, 92, 0.9); 
+     border-color: var(--gold-400); 
+     box-shadow: var(--shadow-lg); 
+    }
+
+.info-icon {
+     background: rgba(212, 175, 55, 0.15); 
+     color: var(--gold-400); 
+     width: 52px; 
+     height: 52px; 
+     min-width: 52px; 
+     border-radius: 12px; 
+     display: flex; 
+     align-items: center; 
+     justify-content: center; 
+     font-size: 1.5rem; 
+     border: 1px solid rgba(212, 175, 55, 0.25); 
+    }
+
+.info-card h3 { 
+    font-size: 1.25rem;
+    font-weight: 700; 
+    color: #ffffff; 
+    margin-bottom: 0.4rem; 
+}
+
+.info-card p {
+     font-size: 0.88rem; 
+     color: var(--navy-100); 
+     line-height: 1.5; 
+     margin: 0; 
+    }
+
+
+/* ======================= 5. About Section ===================== */
+
+.section-label {
+     color: var(--gold-400); 
+     font-size: 0.8rem; 
+     font-weight: 700; 
+     letter-spacing: 2px; 
+     text-transform: uppercase; 
+     margin-bottom: 0.75rem; 
+     display: block; 
+    }
+
+.col-lg-6 h2 {
+     font-size: 2.8rem; 
+     font-weight: 700; 
+     color: #ffffff; 
+     line-height: 1.2; 
+     margin-bottom: 1.5rem;
+     }
+
+.col-lg-6 h2 span {
+    display: block; 
+    color: var(--navy-100); 
+    font-weight: 300; 
+    font-style: italic; 
+    font-family: Georgia, serif; 
+}
+
+.col-lg-6 p { 
+    color: var(--navy-100); 
+    font-size: 1rem; 
+    line-height: 1.7; 
+    margin-bottom: 1.2rem; 
+    opacity: 0.9; 
+}
+
+.text-link { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+    color: var(--gold-400); 
+    font-weight: 600; 
+    margin-top: 0.5rem; 
+}
+
+.text-link:hover { 
+    color: var(--gold-300); 
+    gap: 0.8rem; 
+}
+
+.about-image { 
+    position: relative; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    box-shadow: var(--shadow-lg); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+.about-image img { 
+    width: 100%; 
+    height: 100%; 
+    max-height: 520px; 
+    object-fit: cover; 
+    display: block; 
+    transition: transform 0.5s ease; 
+}
+
+.about-image:hover img { 
+    transform: scale(1.03); 
+}
+
+
+
+/* ================ 6. Campus Life & News / Gallery Grid (برگرفته از سبک طرح تصویر دوم) =============== */
+ .section-heading h2 { 
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    color: #ffffff; 
+}
+
+
+/* کارت‌های تصویری گالری / اخبار */
+
+.container .row.g-4 img.img-fluid { 
+    width: 100%; 
+    height: 260px; 
+    object-fit: cover; 
+    border-radius: 16px !important; 
+    border: 1px solid rgba(227, 232, 241, 0.15); 
+    transition: all 0.4s ease; 
+}
+
+.container .row.g-4 img.img-fluid:hover { 
+    transform: translateY(-5px); 
+    border-color: var(--gold-400); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); 
+}
