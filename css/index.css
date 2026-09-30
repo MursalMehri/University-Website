@@ -25,7 +25,7 @@
 /* ================ 2. Base & Typography ==================== */
 
 body { 
-    background-color: var(--navy-950); 
+    background-color: var(--navy-950) ! important; 
     color: #ffffff; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     overflow-x: hidden; 
